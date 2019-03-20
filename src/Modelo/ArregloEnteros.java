@@ -27,6 +27,7 @@ public class ArregloEnteros {
       System.out.println("Digite el numero de las posicion [" + (i+1) +"]");
       numeros[i] = leer.nextInt();
     }
+    leer.close();
   }
 
   public void Invertir(){
@@ -60,10 +61,11 @@ public class ArregloEnteros {
     return max;
   }
 
-  public int[] Primos(){
+  public int[] primos(){
     int[] q = new int[numeros.length];
-    for (int i=0; i<numeros.length; i++){
-      int j = numeros[i];
+    for (int numero: numeros){
+      int i=0;
+      int j = numero;
       int contador = 0;
       for (int k=1; k<=j;){
         if (j%k==0){
@@ -72,8 +74,26 @@ public class ArregloEnteros {
         }
       }
       q[i]= contador;
+      System.out.println(q[i]);
+      i++;
     }
     return q;
+  }
+
+  public String partidario(){
+    String r="";
+    for (int i=0; i<numeros.length; i++){
+      for (int j=1; j<numeros.length; i+=2){
+        if (numeros[i]<numeros[j]){
+          r="Partidario";
+        }
+        else{
+          r="No partidario";
+        }
+      }
+    }
+    return r;
+    //TODO: Hacer esta madre bien.
   }
 
 

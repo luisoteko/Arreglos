@@ -59,10 +59,18 @@ public class Controlador {
         ArregloEnteros arr5 = new ArregloEnteros(tam);
         arr5.inicializarArreglo();
         arr5.capturarArreglo();
-        int[] q = arr5.Primos();
-        Arrays.sort(q);
-        arr5.setNumeros(q);
-        System.out.println(arr5.max(q));
+        arr5.imprimirArreglo();
+        int[] q = arr5.primos();
+        int max = arr5.max(q);
+        System.out.println(max);
+        break;
+      case 6:
+        ArregloEnteros arr6 = new ArregloEnteros(tam);
+        arr6.inicializarArreglo();
+        arr6.capturarArreglo();
+        arr6.imprimirArreglo();
+        String r = arr6.partidario();
+        System.out.println(r);
     }
   }
 }

@@ -16,8 +16,8 @@ public class ArregloChar {
     }
   }
   public void imprimirArreglo(){
-    for (int i=0; i < letras.length; i++){
-      System.out.print(" "+ letras[i]);
+    for (char letra : letras) {
+      System.out.print(" " + letra);
     }
   }
   public void capturarArreglo(){
