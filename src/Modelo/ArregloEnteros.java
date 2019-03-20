@@ -16,8 +16,8 @@ public class ArregloEnteros {
     }
   }
   public void imprimirArreglo(){
-    for (int i=0; i < numeros.length; i++){
-      System.out.print(" "+numeros[i]);
+    for (int numero : numeros) {
+      System.out.print(" " + numero);
     }
     System.out.print("\n");
   }
@@ -33,8 +33,8 @@ public class ArregloEnteros {
     int j = numeros.length;
     int[] result = new int[j];
 
-    for (int i =0; i<numeros.length; i++){
-      result[j - 1] = numeros[i];
+    for (int numero : numeros) {
+      result[j - 1] = numero;
       j--;
     }
     numeros = result;
@@ -43,8 +43,8 @@ public class ArregloEnteros {
   public int vecesMayor(){
     int aux = 0;
     int max = max(numeros);
-    for (int i=0; i<numeros.length; i++){
-      if (max==numeros[i]){
+    for (int numero : numeros) {
+      if (max == numero) {
         aux++;
       }
     }
@@ -52,9 +52,9 @@ public class ArregloEnteros {
   }
   public int max(int[] numeros){
     int max = 0;
-    for (int i=0; i<numeros.length; i++){
-      if (max < numeros[i]){
-        max = numeros[i];
+    for (int numero : numeros) {
+      if (max < numero) {
+        max = numero;
       }
     }
     return max;
