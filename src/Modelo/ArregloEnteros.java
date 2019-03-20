@@ -1,8 +1,6 @@
 package Modelo;
 
-import java.util.Arrays;
 import java.util.Scanner;
-import org.apache.commons.lang3.ArrayUtils;
 
 public class ArregloEnteros {
 
@@ -44,12 +42,7 @@ public class ArregloEnteros {
 
   public int vecesMayor(){
     int aux = 0;
-    int max = 0;
-    for (int i=0; i<numeros.length; i++){
-      if (max < numeros[i]){
-        max = numeros[i];
-      }
-    }
+    int max = max(numeros);
     for (int i=0; i<numeros.length; i++){
       if (max==numeros[i]){
         aux++;

@@ -1,7 +1,6 @@
 package Modelo;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class ArregloDouble {
 
