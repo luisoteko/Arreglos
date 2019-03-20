@@ -17,8 +17,8 @@ public class ArregloDouble {
   }
 
   public void imprimirArreglo() {
-    for (int i = 0; i < numeros.length; i++) {
-      System.out.print(" " + numeros[i]);
+    for (double numero : numeros) {
+      System.out.print(" " + numero);
     }
     System.out.print("\n");
   }
@@ -33,18 +33,17 @@ public class ArregloDouble {
 
   public double promedio() {
     double sum = 0;
-    for (int i = 0; i < numeros.length; i++) {
-      sum += numeros[i];
+    for (double numero : numeros) {
+      sum += numero;
     }
-    double prom = sum / numeros.length;
-    return prom;
+    return sum / numeros.length;
   }
 
   public double maxNota() {
     double max = 0;
-    for (int i=0; i<numeros.length; i++){
-      if (max < numeros[i]){
-        max = numeros[i];
+    for (double numero : numeros) {
+      if (max < numero) {
+        max = numero;
       }
     }
     return max;
@@ -57,8 +56,8 @@ public class ArregloDouble {
   public int superPromedio() {
     double prom = promedio();
     int aux = 0;
-    for (int i = 0; i < numeros.length; i++) {
-      if (numeros[i] > prom) {
+    for (double numero : numeros) {
+      if (numero > prom) {
         aux++;
       }
     }
@@ -67,8 +66,8 @@ public class ArregloDouble {
 
   public int aprobados() {
     int aux = 0;
-    for (int i = 0; i < numeros.length; i++) {
-      if (numeros[i] > 3) {
+    for (double numero : numeros) {
+      if (numero > 3) {
         aux++;
       }
     }
@@ -77,8 +76,8 @@ public class ArregloDouble {
 
   public int reprobados() {
     int aux = 0;
-    for (int i = 0; i < numeros.length; i++) {
-      if (numeros[i] < 3) {
+    for (double numero : numeros) {
+      if (numero < 3) {
         aux++;
       }
     }
@@ -96,7 +95,7 @@ public class ArregloDouble {
     return result;
   }
 
-  public double factorial(int i) {
+  private double factorial(int i) {
     double factorial;
     factorial = 1;
     for (double j = numeros[i]; j > 0; j--) {
